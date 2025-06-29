@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The whey lovers</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/profile.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Whey store</a>
+
+        <div class="ms-auto d-flex align-items-center gap-3">
+        <span class="userName"></span>
+          <button class="btn btn-outline-primary">
+            <a href="./login.html" class="text-decoration-none text-white btnLogin"
+              >Đăng nhập</a
+            >
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="profile-container">
+        <div class="header">
+          <div id="roleBadge" class="role-badge"></div>
+          <h1>Thông Tin Profile</h1>
+          <p class="subtitle">Quản lý thông tin cá nhân</p>
+        </div>
+
+        <div class="info-section">
+          <div class="info-title">Thông tin tài khoản:</div>
+          <div class="info-item">
+            <span>ID:</span>
+            <span id="displayId"></span>
+          </div>
+          <div class="info-item">
+            <span>Tên đăng nhập:</span>
+            <span id="displayUsername"></span>
+          </div>
+          <div class="info-item">
+            <span>Email:</span>
+            <span id="displayEmail"></span>
+          </div>
+          <div class="info-item">
+            <span>Số dư:</span>
+            <span id="displayBalance"></span>
+          </div>
+        </div>
+
+        <form id="profileForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="username">Tên đăng nhập:</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="readonly"
+                readonly/>
+            </div>
+
+            <div class="form-group">
+              <label for="age">Tuổi:</label>
+              <input type="number" id="age" name="age" min="1" max="120" />
+            </div>
+
+            <div class="form-group">
+              <label for="balance">Số dư:</label>
+              <input
+                type="number"
+                id="balance"
+                name="balance"
+                step="0.01"
+                class="readonly"
+                readonly
+              />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="address">Địa chỉ:</label>
+              <textarea
+                id="address"
+                name="address"
+                placeholder="Nhập địa chỉ đầy đủ..."
+              ></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Cập nhật thông tin</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2025 Quầy bán whey uy tín.🔥😎🔥</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap + JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+
+    <!-- Firebase Auth -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.13.1/firebase-auth-compat.min.js"
+      integrity="sha512-b2PGOE6ClpdFR5WZylPqJ9NEtHyGtdXKIe5wI0qRKVg3VeH9Km8CvihpnySwf6v21TV2cMTUp/BuglUiFLB38Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./js/firebase-config.js"></script>
+    <script src="./js/profile.js"></script>
+  </body>
+</html>

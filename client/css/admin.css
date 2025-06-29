@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar với màu dịu nhẹ hơn */
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #3c394e; /* Màu xám đậm */
+    color: #ffffff;
+}
+
+.sidebar h4 {
+    color: #f8d210; /* Màu vàng nổi bật */
+}
+
+.sidebar .nav-link {
+    color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar .nav-link.active, 
+.sidebar .nav-link:hover {
+    background-color: #bfcbd6; /* Màu xám nhạt hơn khi hover */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #7f9ab5; /* Màu xám trung tính */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Nút đăng xuất */
+.btn-danger {
+    width: 100px;
+}
+
+/* Bảng sản phẩm */
+.table img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}

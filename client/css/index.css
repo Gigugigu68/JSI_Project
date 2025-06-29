@@ -1,0 +1,45 @@
+body {
+  background-image: url(https://www.primalstrength.com/cdn/shop/files/gymdesign_render_Two_collumn_grid_cb1b5850-fa8e-4a7b-a2b3-190c2e45facd.jpg?v=1680719688&width=1500);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.product-card img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .cart-icon {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+
+.product-card:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+

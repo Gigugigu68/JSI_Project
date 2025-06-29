@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The whey lovers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">Whey store</a>
+
+    <div class="ms-auto d-flex align-items-center gap-3">
+      <div class="cart-icon" onclick="showCart()">
+        🛒
+        <span class="cart-count" id="cart-count">Here</span>
+      </div>
+      <span class="text-dark me-3">Xin chào <a href="tttk.html" class="userName text-decoration-none"></a></span>
+      <button class="btn btn-outline-primary"><a href="./login.html" class="text-decoration-none btnLogin">Đăng nhập</a></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img\whey-isolate-tot-nhat-amix-gold-isolate-5lbs.jpg" class="d-block w-100 h-50" alt="">
+    </div>
+    <div class="carousel-item">
+      <img src="img\whey-isolate-tot-nhat-iso-hd-5lbs.jpg" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item">
+      <img src="img\whey-isolate-tot-nhat-iso-whey-zero-5lbs.jpg" class="d-block w-100" alt="">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Banner -->
+<div class="container_fluid mt-4">
+  <div class="text-center p-5 rounded shadow-sm text-white">
+    <h1>🗣️🗣️Các dòng whey uy tín và thịnh hành!🗣️🗣️</h1>
+    <p>Chất lượng tuyệt vời - Giá cả hợp lý - Hỗ trợ tận tình💨</p>
+  </div>
+</div>
+
+<!-- Sản phẩm -->
+<div class="container my-5 text-white">
+  <h2 class="mb-4 text-center">🔥List các loại whey đang rao bán🔥</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4" id="product-list">
+    <!-- Sản phẩm sẽ được thêm ở đây bằng JS -->
+  </div>
+</div>
+
+<!-- Modal Giỏ Hàng -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🛒 Giỏ Hàng Của Bạn</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body" id="cart-items">
+        <!-- Sản phẩm trong giỏ -->
+      </div>
+      <div class="modal-footer">
+        <strong class="me-auto">Tổng tiền: <span id="cart-total">0</span>đ</strong>
+        <button type="button" class="btn btn-success" onclick="checkout()">Thanh Toán</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>© 2025 Quầy bán whey uy tín.🔥😎🔥</p>
+  </div>
+</footer>
+
+<!-- Bootstrap + JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+
+  <!-- Firebase Auth -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.13.1/firebase-auth-compat.min.js"
+      integrity="sha512-b2PGOE6ClpdFR5WZylPqJ9NEtHyGtdXKIe5wI0qRKVg3VeH9Km8CvihpnySwf6v21TV2cMTUp/BuglUiFLB38Q=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="./js/firebase-config.js"></script>
+<script src="./js/index.js"></script>
+
+</body>
+</html>
